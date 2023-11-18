@@ -82,7 +82,10 @@ export const Edit = ( { attributes, setAttributes }: Props ): JSX.Element => {
 
 	useEffect( () => {
 		const fetchMixcloudData = async ( url: string ) => {
-			if ( ! url ) return;
+			if ( ! url ) {
+				setIsLoading( false );
+				return;
+			}
 
 			setIsLoading( true );
 			try {
@@ -93,11 +96,13 @@ export const Edit = ( { attributes, setAttributes }: Props ): JSX.Element => {
 					throw new Error( 'Network response was not ok' );
 				}
 
+				const data = await response.json();
 				setAttributes( {
 					...attributes,
-					mixcloudData: await response.json(),
+					mixcloudData: data,
 				} );
 			} catch ( error ) {
+				console.error( error ); // Log the error for debugging
 				setAttributes( { ...attributes, mixcloudData: null } );
 			} finally {
 				setIsLoading( false );
@@ -105,7 +110,7 @@ export const Edit = ( { attributes, setAttributes }: Props ): JSX.Element => {
 		};
 
 		fetchMixcloudData( mixcloudUrl );
-	}, [ mixcloudUrl, setAttributes, attributes ] );
+	}, [ mixcloudUrl ] );
 
 	const blockProps = useBlockProps();
 
