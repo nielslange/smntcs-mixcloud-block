@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nielslange/smntcs-mixcloud-block",
+	"version": "0.1.0",
+	"title": "SMNTCS Mixcloud Block",
+	"category": "widgets",
+	"icon": "album",
+	"description": "A simple Gutenberg block to display Mixcloud shows.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"mixcloudUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"showPlayCount": {
+			"type": "boolean",
+			"default": true
+		},
+		"showFavoritesCount": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCommentsCount": {
+			"type": "boolean",
+			"default": true
+		},
+		"showListenerCount": {
+			"type": "boolean",
+			"default": true
+		},
+		"showRepostsCount": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "smntcs-mixcloud-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

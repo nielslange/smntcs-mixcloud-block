@@ -1,0 +1,8 @@
+node_modules
+vendor
+phplint.cache
+.phplint-cache
+.phplint.cache
+.DS_Store
+/.phplint.cache
+/build
