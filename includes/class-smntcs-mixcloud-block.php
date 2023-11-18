@@ -1,8 +1,14 @@
 <?php
 /**
- * SMNTCS Mixcloud Block class
+ * SMNTCS Mixcloud Block
+ *
+ * @package SMNTCS\Mixcloud\Block
+ * @since 1.0.0
  */
 
+/**
+ * SMNTCS Mixcloud Block class
+ */
 class SMNTCS_Mixcloud_Block {
 
 	/**

@@ -1,21 +1,21 @@
 .mixcloud-block-container {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 
-    .mixcloud-block-left-column {
-        flex: 1; // Adjust this value as needed for your desired width
-        max-width: 33%; // Adjust the max-width as per your layout requirement
+	.mixcloud-block-left-column {
+		flex: 1; // Adjust this value as needed for your desired width
+		max-width: 33%; // Adjust the max-width as per your layout requirement
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
 
-    .mixcloud-block-right-column {
-        flex: 1; // Adjust this value as needed for your desired width
-        max-width: 66%; // Adjust the max-width as per your layout requirement
-        padding-left: 20px; // Optional spacing between columns
+	.mixcloud-block-right-column {
+		flex: 1; // Adjust this value as needed for your desired width
+		max-width: 66%; // Adjust the max-width as per your layout requirement
+		padding-left: 20px; // Optional spacing between columns
 
 		h2 {
 			margin: 0;
@@ -45,5 +45,5 @@
 			margin: 0 10px;
 
 		}
-    }
+	}
 }
